@@ -18,9 +18,7 @@ public class AuthorizationServerConfiguration implements AuthorizationServerConf
 
   @Override
   public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-    security
-        .tokenKeyAccess("permitAll()")
-        .checkTokenAccess("isAuthenticated()"); // Only authenticated clients can call check token
+    security.tokenKeyAccess("permitAll()").checkTokenAccess("permitAll()");
   }
 
   @Override

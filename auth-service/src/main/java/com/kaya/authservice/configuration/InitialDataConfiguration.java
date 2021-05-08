@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
-import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
@@ -21,7 +20,7 @@ public class InitialDataConfiguration {
   public void init() {
     var user =
         AuthUser.builder()
-            .id(UUID.randomUUID().toString())
+            .id("22e0aed5-3686-43a8-ab3f-3d0c186fca34")
             .username("admin")
             .password(passwordEncoder.encode("admin"))
             .permissions(Arrays.asList("READ_BOOK", "WRITE_BOOK"))

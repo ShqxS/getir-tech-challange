@@ -18,6 +18,12 @@ public class UserService {
   private final PasswordEncoder passwordEncoder;
 
   public AuthUser create(UserCreateDTO userCreateDTO) {
+
+    var userDB = authUserRepository.findByUsername(userCreateDTO.getUsername());
+    if (userDB.isPresent()) {
+      throw new RuntimeException("User already exist");
+    }
+
     var user =
         AuthUser.builder()
             .id(UUID.randomUUID().toString())
