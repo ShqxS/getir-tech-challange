@@ -5,7 +5,6 @@ import com.kaya.orderservice.dto.BookResponseDTO;
 import com.kaya.orderservice.dto.BookUpdateRequest;
 import com.kaya.orderservice.entity.Book;
 import com.kaya.orderservice.entity.OrderEntity;
-import com.kaya.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
