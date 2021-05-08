@@ -2,9 +2,9 @@ package com.kaya.bookservice.controller;
 
 import com.kaya.bookservice.dto.BookResponseDTO;
 import com.kaya.bookservice.dto.SuccessResponse;
+import com.kaya.bookservice.exception.CodeEnum;
 import com.kaya.bookservice.service.BookService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +23,7 @@ public class BookController {
 
   @GetMapping
   public ResponseEntity<SuccessResponse<List<BookResponseDTO>>> getAll() {
-    var response = new SuccessResponse<>(bookService.getAll(), HttpStatus.OK.value());
+    var response = new SuccessResponse<>(bookService.getAll(), CodeEnum.SUCCESS_RESPONSE.getCode());
     return ResponseEntity.ok(response);
   }
 }
