@@ -10,7 +10,7 @@ public class GlobalExceptionHandler {
 
   @ExceptionHandler(value = {BookException.class})
   protected ResponseEntity<ErrorResponse> handleBookException(BookException ex) {
-    return ResponseEntity.status(CodeEnum.INTERNAL_SERVER_ERROR.getHttpStatus())
+    return ResponseEntity.status(ex.getErrorCode().getHttpStatus())
         .body(
             ErrorResponse.builder()
                 .code(ex.getErrorCode().getCode())

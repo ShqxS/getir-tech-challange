@@ -16,7 +16,10 @@ public class BookService {
   private final BookMapper bookMapper;
 
   public List<BookResponseDTO> getAll() {
-
     return bookReadService.findAll().stream().map(bookMapper::map).collect(Collectors.toList());
+  }
+
+  public BookResponseDTO get(Long id) {
+    return bookMapper.map(bookReadService.findById(id));
   }
 }
