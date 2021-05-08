@@ -8,11 +8,11 @@ services:
     build: book-service/.
     ports:
       - "9091:9091"
+  auth-service:
+    build: auth-service/.
+    ports:
+      - "9092:9092"
   mongo:
     image: mongo
     ports:
-    - "27017:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: root
-      MONGO_INITDB_DATABASE: authservice
+      - "27017:27017"

@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/utils/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/configuration/SwaggerConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/OrderCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/OrderCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/service/OrderCreateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/service/OrderCreateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/configuration/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/discovery-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/auth-service" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -65,6 +67,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Caner Kaya\Desktop\Projets\getir-tech-challange\auth-service" />
       <recent name="C:\Users\Caner Kaya\Desktop\Projets\getir-tech-challange\discovery-server" />
       <recent name="C:\Users\Caner Kaya\Desktop\Projets\getir-tech-challange\order-service" />
     </key>
@@ -73,12 +76,13 @@
       <recent name="com.kaya.orderservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kaya.authservice.configuration" />
       <recent name="com.kaya.orderservice.exception" />
       <recent name="com.kaya.orderservice.order.controller" />
       <recent name="com.kaya.orderservice.book.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -170,7 +174,7 @@
       <workItem from="1620471379487" duration="784000" />
       <workItem from="1620472237837" duration="5996000" />
       <workItem from="1620478308610" duration="9965000" />
-      <workItem from="1620488471876" duration="10216000" />
+      <workItem from="1620488471876" duration="12953000" />
     </task>
     <servers />
   </component>
