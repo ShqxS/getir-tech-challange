@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AuthUser implements UserDetails {
-  @Id private Long id;
+  @Id private String id;
   private String username;
   private String password;
   private List<String> permissions;

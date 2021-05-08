@@ -1,31 +1,30 @@
-package com.kaya.authservice.configuration;
+package com.kaya.authservice.service;
 
+import com.kaya.authservice.dto.UserCreateDTO;
 import com.kaya.authservice.entity.AuthUser;
 import com.kaya.authservice.repository.AuthUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.Arrays;
 import java.util.UUID;
 
-@Component
+@Service
 @RequiredArgsConstructor
-public class InitialDataConfiguration {
+public class UserService {
 
   private final AuthUserRepository authUserRepository;
   private final PasswordEncoder passwordEncoder;
 
-  @PostConstruct
-  public void init() {
+  public AuthUser create(UserCreateDTO userCreateDTO) {
     var user =
         AuthUser.builder()
             .id(UUID.randomUUID().toString())
-            .username("admin")
-            .password(passwordEncoder.encode("admin"))
-            .permissions(Arrays.asList("READ_BOOK", "WRITE_BOOK"))
+            .username(userCreateDTO.getUsername())
+            .password(passwordEncoder.encode(userCreateDTO.getPassword()))
+            .permissions(Arrays.asList("READ_BOOK", "WRITE_BOOK", "READ_ORDER", "WRITE_ORDER"))
             .build();
-    authUserRepository.save(user);
+    return authUserRepository.save(user);
   }
 }
