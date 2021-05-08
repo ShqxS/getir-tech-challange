@@ -12,8 +12,6 @@ import lombok.NoArgsConstructor;
 public class BookResponseDTO {
 
   private Long id;
-  private String name;
   private Integer price;
-  private Integer pageSize;
   private Integer stock;
 }
