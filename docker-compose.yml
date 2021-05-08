@@ -1,0 +1,6 @@
+version: "3"
+services:
+  book-service:
+    build: book-service/.
+    ports:
+      - "9090:9090"
