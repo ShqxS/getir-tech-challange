@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 public class BookCreateService {
 
   private final BookRepository bookRepository;
+  private final BookReadService bookReadService;
   private final BookMapper bookMapper;
 
   public Set<Book> create(List<BookResponseDTO> booksResponse) {
@@ -27,9 +28,7 @@ public class BookCreateService {
         booksResponse.stream().map(BookResponseDTO::getId).collect(Collectors.toList());
 
     List<Long> existingBooksIds =
-        bookRepository.findAllByIdIn(bookIds).stream()
-            .map(Book::getId)
-            .collect(Collectors.toList());
+        bookReadService.findAllById(bookIds).stream().map(Book::getId).collect(Collectors.toList());
 
     books =
         books.stream()

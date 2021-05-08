@@ -2,7 +2,7 @@ package com.kaya.orderservice.service;
 
 import com.kaya.orderservice.entity.OrderEntity;
 import com.kaya.orderservice.entity.QOrderEntity;
-import com.kaya.orderservice.exception.CodeEnum;
+import com.kaya.orderservice.enums.CodeEnum;
 import com.kaya.orderservice.exception.OrderException;
 import com.kaya.orderservice.repository.OrderRepository;
 import com.querydsl.core.types.dsl.BooleanExpression;

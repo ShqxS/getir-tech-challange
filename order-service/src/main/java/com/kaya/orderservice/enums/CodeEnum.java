@@ -1,4 +1,4 @@
-package com.kaya.orderservice.exception;
+package com.kaya.orderservice.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

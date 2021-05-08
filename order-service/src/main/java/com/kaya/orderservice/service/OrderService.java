@@ -16,6 +16,7 @@ public class OrderService {
 
   private final OrderCreateService orderCreateService;
   private final OrderReadService orderReadService;
+  private final OrderUpdateService orderUpdateService;
   private final OrderMapper orderMapper;
 
   @Transactional(rollbackFor = Exception.class)
@@ -31,5 +32,10 @@ public class OrderService {
 
   public OrderResponseDTO getById(Long id) {
     return orderMapper.map(orderReadService.getById(id));
+  }
+
+  @Transactional(rollbackFor = Exception.class)
+  public OrderResponseDTO updateStock(Long id) {
+    return orderMapper.map(orderUpdateService.updateStock(id));
   }
 }

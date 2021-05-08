@@ -1,6 +1,7 @@
 package com.kaya.orderservice.exception;
 
 import com.kaya.orderservice.dto.ErrorResponse;
+import com.kaya.orderservice.enums.CodeEnum;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

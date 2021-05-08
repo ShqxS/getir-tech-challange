@@ -1,5 +1,6 @@
 package com.kaya.orderservice.exception;
 
+import com.kaya.orderservice.enums.CodeEnum;
 import lombok.Getter;
 
 @Getter

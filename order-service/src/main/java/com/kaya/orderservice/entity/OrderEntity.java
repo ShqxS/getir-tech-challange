@@ -1,6 +1,6 @@
 package com.kaya.orderservice.entity;
 
-import com.kaya.orderservice.entity.Book;
+import com.kaya.orderservice.enums.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -39,8 +39,13 @@ public class OrderEntity {
   @Column(nullable = false)
   private String username;
 
+  @Column(nullable = false)
+  private OrderStatus status;
+
   @Transient
   public Integer getTotalCost() {
     return books.stream().mapToInt(Book::getPrice).sum();
   }
+
+
 }
