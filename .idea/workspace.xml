@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/auth-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/configuration/SwaggerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/configuration/WebSecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/configuration/WebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <recent name="com.kaya.orderservice.book.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
+  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -157,8 +154,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.BookServiceApplication" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +171,7 @@
       <workItem from="1620471379487" duration="784000" />
       <workItem from="1620472237837" duration="5996000" />
       <workItem from="1620478308610" duration="9965000" />
-      <workItem from="1620488471876" duration="12953000" />
+      <workItem from="1620488471876" duration="13622000" />
     </task>
     <servers />
   </component>
