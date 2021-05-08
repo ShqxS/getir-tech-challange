@@ -7,6 +7,7 @@ import com.kaya.bookservice.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -23,5 +24,9 @@ public class BookReadService {
     return bookRepository
         .findById(id)
         .orElseThrow(() -> new BookException(CodeEnum.CONTENT_NOT_FOUND_ERROR));
+  }
+
+  public List<Book> findAllByIds(Collection<Long> ids) {
+    return bookRepository.findAllByIdIn(ids);
   }
 }

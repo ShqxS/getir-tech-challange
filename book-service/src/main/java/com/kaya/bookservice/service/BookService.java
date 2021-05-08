@@ -1,5 +1,6 @@
 package com.kaya.bookservice.service;
 
+import com.kaya.bookservice.dto.BookQueryRequest;
 import com.kaya.bookservice.dto.BookResponseDTO;
 import com.kaya.bookservice.mapper.BookMapper;
 import lombok.RequiredArgsConstructor;
@@ -21,5 +22,11 @@ public class BookService {
 
   public BookResponseDTO get(Long id) {
     return bookMapper.map(bookReadService.findById(id));
+  }
+
+  public List<BookResponseDTO> getByIds(BookQueryRequest bookQueryRequest) {
+    return bookReadService.findAllByIds(bookQueryRequest.getBookIds()).stream()
+        .map(bookMapper::map)
+        .collect(Collectors.toList());
   }
 }
