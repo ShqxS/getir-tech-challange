@@ -7,6 +7,7 @@ import com.kaya.orderservice.enums.CodeEnum;
 import com.kaya.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +29,7 @@ public class OrderController {
   private final OrderService orderService;
 
   @PostMapping
+  @PreAuthorize("hasAuthority('WRITE_ORDER')")
   public ResponseEntity<SuccessResponse<OrderResponseDTO>> create(
       @Validated @RequestBody OrderCreateDTO orderCreateDTO) {
 
@@ -38,6 +40,7 @@ public class OrderController {
   }
 
   @GetMapping("query")
+  @PreAuthorize("hasAuthority('READ_ORDER')")
   public ResponseEntity<SuccessResponse<List<OrderResponseDTO>>> query(
       @RequestParam(required = false) String username) {
 
@@ -47,6 +50,7 @@ public class OrderController {
   }
 
   @GetMapping("{id}")
+  @PreAuthorize("hasAuthority('READ_ORDER')")
   public ResponseEntity<SuccessResponse<OrderResponseDTO>> getById(@PathVariable("id") Long id) {
     var response =
         new SuccessResponse<>(orderService.getById(id), CodeEnum.SUCCESS_RESPONSE.getCode());

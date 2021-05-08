@@ -6,6 +6,7 @@ import com.kaya.orderservice.enums.CodeEnum;
 import com.kaya.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ public class BookController {
   private final OrderService orderService;
 
   @PutMapping("{id}")
+  @PreAuthorize("hasAuthority('WRITE_ORDER')")
   public ResponseEntity<SuccessResponse<OrderResponseDTO>> syncStock(
       @PathVariable("id") Long id) {
     var response =
