@@ -23,7 +23,7 @@ public class InitialDataConfiguration {
             .id("22e0aed5-3686-43a8-ab3f-3d0c186fca34")
             .username("admin")
             .password(passwordEncoder.encode("admin"))
-            .permissions(Arrays.asList("READ_BOOK", "WRITE_BOOK"))
+            .permissions(Arrays.asList("READ_BOOK", "WRITE_BOOK", "READ_ORDER", "WRITE_ORDER"))
             .build();
     authUserRepository.save(user);
   }
