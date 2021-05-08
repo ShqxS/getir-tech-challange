@@ -7,7 +7,7 @@ import lombok.Data;
 @Builder
 public class BookResponseDTO {
 
-  private Long Id;
+  private Long id;
   private String name;
   private Integer price;
   private Integer pageSize;

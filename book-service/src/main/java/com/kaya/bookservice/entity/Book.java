@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @Entity
 @Data
 public class Book {
-  @Id @GeneratedValue private Long Id;
+  @Id @GeneratedValue private Long id;
 
   @Column(nullable = false)
   private String name;

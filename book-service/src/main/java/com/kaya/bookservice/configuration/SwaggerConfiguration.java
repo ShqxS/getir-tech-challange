@@ -13,22 +13,20 @@ import springfox.documentation.spring.web.plugins.Docket;
 @Configuration
 public class SwaggerConfiguration {
 
-    @Value("${spring.application.name}")
-    private String applicationName;
+  @Value("${spring.application.name}")
+  private String applicationName;
 
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.kaya"))
-                .paths(PathSelectors.any())
-                .build()
-                .apiInfo(apiInfo());
-    }
+  @Bean
+  public Docket api() {
+    return new Docket(DocumentationType.SWAGGER_2)
+        .select()
+        .apis(RequestHandlerSelectors.basePackage("com.kaya"))
+        .paths(PathSelectors.any())
+        .build()
+        .apiInfo(apiInfo());
+  }
 
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title(applicationName)
-                .build();
-    }
+  private ApiInfo apiInfo() {
+    return new ApiInfoBuilder().title(applicationName).build();
+  }
 }
