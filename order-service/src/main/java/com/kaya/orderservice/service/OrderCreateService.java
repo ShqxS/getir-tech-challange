@@ -7,6 +7,7 @@ import com.kaya.orderservice.entity.Book;
 import com.kaya.orderservice.entity.OrderEntity;
 import com.kaya.orderservice.enums.OrderStatus;
 import com.kaya.orderservice.repository.OrderRepository;
+import com.kaya.orderservice.utils.SecurityUtils;
 import com.kaya.orderservice.validator.OrderValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -35,7 +36,7 @@ public class OrderCreateService {
 
     OrderEntity orderEntity = new OrderEntity();
     orderEntity.setStatus(OrderStatus.ACTIVE);
-    orderEntity.setUsername(orderCreateDTO.getUsername());
+    orderEntity.setUsername(SecurityUtils.getUsername());
     orderEntity.setBooks(books);
 
     orderRepository.save(orderEntity);

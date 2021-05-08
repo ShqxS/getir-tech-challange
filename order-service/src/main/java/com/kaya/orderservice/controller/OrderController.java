@@ -44,8 +44,7 @@ public class OrderController {
   public ResponseEntity<SuccessResponse<List<OrderResponseDTO>>> query(
       @RequestParam(required = false) String username) {
 
-    var response =
-        new SuccessResponse<>(orderService.query(username), CodeEnum.CONTENT_CREATED.getCode());
+    var response = new SuccessResponse<>(orderService.query(), CodeEnum.CONTENT_CREATED.getCode());
     return ResponseEntity.ok(response);
   }
 

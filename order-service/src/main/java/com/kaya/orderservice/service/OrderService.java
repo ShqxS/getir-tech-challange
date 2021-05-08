@@ -3,6 +3,7 @@ package com.kaya.orderservice.service;
 import com.kaya.orderservice.dto.OrderCreateDTO;
 import com.kaya.orderservice.dto.OrderResponseDTO;
 import com.kaya.orderservice.mapper.OrderMapper;
+import com.kaya.orderservice.utils.SecurityUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,8 +25,8 @@ public class OrderService {
     return orderMapper.map(orderCreateService.create(orderCreateDTO));
   }
 
-  public List<OrderResponseDTO> query(String username) {
-    return orderReadService.query(username).stream()
+  public List<OrderResponseDTO> query() {
+    return orderReadService.query(SecurityUtils.getUsername()).stream()
         .map(orderMapper::map)
         .collect(Collectors.toList());
   }
