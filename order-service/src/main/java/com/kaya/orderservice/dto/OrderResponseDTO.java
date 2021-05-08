@@ -15,5 +15,6 @@ public class OrderResponseDTO {
 
   private Long id;
   private Integer totalCost;
+  private String username;
   private List<BookResponseDTO> books;
 }

@@ -28,4 +28,8 @@ public class OrderService {
         .map(orderMapper::map)
         .collect(Collectors.toList());
   }
+
+  public OrderResponseDTO getById(Long id) {
+    return orderMapper.map(orderReadService.getById(id));
+  }
 }
