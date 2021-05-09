@@ -13,5 +13,6 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class BookUpdateRequest {
 
-  @NotNull private Integer stock;
+  @NotNull(message = "stock field is required")
+  private Integer stock;
 }

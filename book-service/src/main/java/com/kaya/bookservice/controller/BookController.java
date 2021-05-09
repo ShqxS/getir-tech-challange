@@ -9,7 +9,6 @@ import com.kaya.bookservice.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -46,7 +46,7 @@ public class BookController {
   @PostMapping("search")
   @PreAuthorize("hasAuthority('READ_BOOK')")
   public ResponseEntity<SuccessResponse<List<BookResponseDTO>>> getByIds(
-      @Validated @RequestBody BookQueryRequest bookQueryRequest) {
+      @Valid @RequestBody BookQueryRequest bookQueryRequest) {
     var response =
         new SuccessResponse<>(
             bookService.getByIds(bookQueryRequest), CodeEnum.SUCCESS_RESPONSE.getCode());
@@ -56,7 +56,7 @@ public class BookController {
   @PutMapping("{id}")
   @PreAuthorize("hasAuthority('WRITE_BOOK')")
   public ResponseEntity<SuccessResponse<BookResponseDTO>> update(
-      @PathVariable("id") Long id, @Validated @RequestBody BookUpdateRequest bookUpdateRequest) {
+      @PathVariable("id") Long id, @Valid @RequestBody BookUpdateRequest bookUpdateRequest) {
     var response =
         new SuccessResponse<>(
             bookService.update(id, bookUpdateRequest), CodeEnum.SUCCESS_RESPONSE.getCode());
