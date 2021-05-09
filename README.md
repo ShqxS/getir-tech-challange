@@ -9,6 +9,7 @@
 - User can create an order
 - User can obtain a detail of order
 - User can list all orders that owns them
+- User can sync stock information
 
 ## Running instructions on local machine
 
@@ -26,3 +27,4 @@ java -jar auth-service/target/auth-service-0.0.1-SNAPSHOT.jar
 java -jar book-service/target/book-service-0.0.1-SNAPSHOT.jar
 java -jar order-service/target/order-service-0.0.1-SNAPSHOT.jar
 ```
+You can use the given postman collection (**Getir.postman_collection.json**) for testing the APIs
