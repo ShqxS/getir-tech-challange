@@ -24,7 +24,11 @@ mvn clean package
 Finally you can run jar files. Go project folder and run
 ```
 java -jar auth-service/target/auth-service-0.0.1-SNAPSHOT.jar
+```
+```
 java -jar book-service/target/book-service-0.0.1-SNAPSHOT.jar
+```
+```
 java -jar order-service/target/order-service-0.0.1-SNAPSHOT.jar
 ```
 You can use the given postman collection (**Getir.postman_collection.json**) for testing the APIs
