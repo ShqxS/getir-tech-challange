@@ -9,7 +9,7 @@
 - User can create an order
 - User can obtain a detail of order
 - User can list all orders that owns them
-- User can sync stock information
+- User can sync the stock information of orders
 
 ## Running instructions on local machine
 
