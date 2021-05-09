@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/AuthUserDetailsServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/resources/application-docker.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,12 +62,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../demo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="google-java-format.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="ReactorSettings">
@@ -89,7 +91,7 @@
       <recent name="com.kaya.orderservice.order.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+  <component name="RunManager" selected="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -120,24 +122,73 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="AuthUserDetailsServiceTest.shouldFindUserDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kaya.authservice.AuthServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.authservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.authservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.authservice.service.AuthUserDetailsServiceTest" />
+      <option name="METHOD_NAME" value="shouldFindUserDetails" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="book-service" />
+    <configuration name="AuthUserDetailsServiceTest.shouldNotFindUserDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kaya.bookservice.*" />
+          <option name="PATTERN" value="com.kaya.authservice.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kaya.bookservice.BookServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="PACKAGE_NAME" value="com.kaya.authservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.authservice.service.AuthUserDetailsServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotFindUserDetails" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.shouldCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.authservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.authservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.authservice.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="shouldCreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.shouldNotCreateWhenUserAlreadyExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.authservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.authservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.authservice.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotCreateWhenUserAlreadyExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kaya.authservice.AuthServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,13 +210,19 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.AuthServiceApplication" />
-      <item itemvalue="Spring Boot.BookServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="JUnit.UserServiceTest.shouldCreate" />
+      <item itemvalue="JUnit.UserServiceTest.shouldNotCreateWhenUserAlreadyExists" />
+      <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldFindUserDetails" />
+      <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails" />
+        <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldFindUserDetails" />
+        <item itemvalue="JUnit.UserServiceTest.shouldNotCreateWhenUserAlreadyExists" />
+        <item itemvalue="JUnit.UserServiceTest.shouldCreate" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
-        <item itemvalue="Spring Boot.BookServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +244,11 @@
       <workItem from="1620513313994" duration="225000" />
       <workItem from="1620519280679" duration="892000" />
       <workItem from="1620522982910" duration="316000" />
-      <workItem from="1620525574038" duration="2960000" />
+      <workItem from="1620525574038" duration="3241000" />
+      <workItem from="1620555851115" duration="28000" />
+      <workItem from="1620556394085" duration="64000" />
+      <workItem from="1620557447623" duration="628000" />
+      <workItem from="1620560959321" duration="2904000" />
     </task>
     <servers />
   </component>
