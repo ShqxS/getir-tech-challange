@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(value = "bookClient", url = "http://localhost:9090/book/")
+@FeignClient(value = "bookClient", url = "${feign.bookservice.url}")
 public interface BookEndpoint {
 
   @PostMapping("search")
