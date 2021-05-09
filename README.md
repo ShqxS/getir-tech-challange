@@ -1,6 +1,6 @@
 # Getir Tech Chalange
 ## Architectural Design
-![Design@2x](https://user-images.githubusercontent.com/33653098/117555998-fea33f00-b06c-11eb-887e-2973c0ef4e3f.jpg)
+![Design@2x](https://user-images.githubusercontent.com/33653098/117581948-5ba00300-b108-11eb-85b2-2847dfaf1ade.jpg)
 
 ## Basic explanations about capabilities
 - Auth service can register a user
@@ -30,6 +30,9 @@ java -jar book-service/target/book-service-0.0.1-SNAPSHOT.jar
 ```
 ```
 java -jar order-service/target/order-service-0.0.1-SNAPSHOT.jar
+```
+```
+java -jar api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar
 ```
 You can use the given postman collection (**Getir.postman_collection.json**) for testing the APIs
 
