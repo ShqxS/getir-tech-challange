@@ -8,15 +8,14 @@ import com.kaya.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,7 +30,7 @@ public class OrderController {
   @PostMapping
   @PreAuthorize("hasAuthority('WRITE_ORDER')")
   public ResponseEntity<SuccessResponse<OrderResponseDTO>> create(
-      @Validated @RequestBody OrderCreateDTO orderCreateDTO) {
+      @Valid @RequestBody OrderCreateDTO orderCreateDTO) {
 
     var response =
         new SuccessResponse<>(
@@ -41,8 +40,7 @@ public class OrderController {
 
   @GetMapping("query")
   @PreAuthorize("hasAuthority('READ_ORDER')")
-  public ResponseEntity<SuccessResponse<List<OrderResponseDTO>>> query(
-      @RequestParam(required = false) String username) {
+  public ResponseEntity<SuccessResponse<List<OrderResponseDTO>>> query() {
 
     var response = new SuccessResponse<>(orderService.query(), CodeEnum.CONTENT_CREATED.getCode());
     return ResponseEntity.ok(response);

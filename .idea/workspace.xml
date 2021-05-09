@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/book-service/src/test/java/com/kaya/bookservice/service/BookReadServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/test/java/com/kaya/bookservice/service/BookServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/test/java/com/kaya/bookservice/service/BookUpdateServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/BookResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/BookResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/client/BookEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/client/BookEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/BookUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/BookUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/OrderCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/OrderCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/exception/GlobalExceptionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <recent name="com.kaya.orderservice.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.kaya.bookservice.service in book-service">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -215,6 +217,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kaya.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.BookServiceApplication" />
@@ -223,6 +232,7 @@
       <item itemvalue="JUnit.BookReadServiceTest.shouldFindAllByIds" />
       <item itemvalue="JUnit.BookUpdateServiceTest.shouldUpdate" />
       <item itemvalue="JUnit.com.kaya.bookservice.service in book-service" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
     </list>
     <recent_temporary>
       <list>
