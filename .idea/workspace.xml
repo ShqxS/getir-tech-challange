@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/book-service/src/test/java/com/kaya/bookservice/service/BookReadServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/test/java/com/kaya/bookservice/service/BookServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/test/java/com/kaya/bookservice/service/BookUpdateServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/BookUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/BookUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/BookResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/BookResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/entity/Book.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
       <recent name="com.kaya.orderservice.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
+  <component name="RunManager" selected="JUnit.com.kaya.bookservice.service in book-service">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -121,6 +123,84 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="BookReadServiceTest.shouldFindAllByIds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="book-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.bookservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.bookservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.bookservice.service.BookReadServiceTest" />
+      <option name="METHOD_NAME" value="shouldFindAllByIds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookReadServiceTest.shouldFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="book-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.bookservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.bookservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.bookservice.service.BookReadServiceTest" />
+      <option name="METHOD_NAME" value="shouldFindById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookReadServiceTest.shouldNotFindByIdWhenBookNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="book-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.bookservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.bookservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.bookservice.service.BookReadServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotFindByIdWhenBookNotExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookUpdateServiceTest.shouldUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="book-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.bookservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.bookservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.bookservice.service.BookUpdateServiceTest" />
+      <option name="METHOD_NAME" value="shouldUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.kaya.bookservice.service in book-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="book-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.bookservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.bookservice.service" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="auth-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kaya.authservice.AuthServiceApplication" />
@@ -135,29 +215,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kaya.orderservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kaya.orderservice.OrderServiceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Spring Boot.AuthServiceApplication" />
-      <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.BookServiceApplication" />
+      <item itemvalue="JUnit.BookReadServiceTest.shouldFindById" />
+      <item itemvalue="JUnit.BookReadServiceTest.shouldNotFindByIdWhenBookNotExists" />
+      <item itemvalue="JUnit.BookReadServiceTest.shouldFindAllByIds" />
+      <item itemvalue="JUnit.BookUpdateServiceTest.shouldUpdate" />
+      <item itemvalue="JUnit.com.kaya.bookservice.service in book-service" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="JUnit.com.kaya.bookservice.service in book-service" />
+        <item itemvalue="JUnit.BookUpdateServiceTest.shouldUpdate" />
+        <item itemvalue="JUnit.BookReadServiceTest.shouldFindAllByIds" />
+        <item itemvalue="JUnit.BookReadServiceTest.shouldNotFindByIdWhenBookNotExists" />
+        <item itemvalue="JUnit.BookReadServiceTest.shouldFindById" />
       </list>
     </recent_temporary>
   </component>
