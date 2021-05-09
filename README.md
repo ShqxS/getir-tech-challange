@@ -32,3 +32,14 @@ java -jar book-service/target/book-service-0.0.1-SNAPSHOT.jar
 java -jar order-service/target/order-service-0.0.1-SNAPSHOT.jar
 ```
 You can use the given postman collection (**Getir.postman_collection.json**) for testing the APIs
+
+## Running instructions on docker
+Go to destination of each service and run
+```
+mvn clean package
+```
+Then go to project folder and run
+```
+docker-compose up --build -d
+```
+You can use the given postman collection (**Getir.postman_collection.json**) for testing the APIs
