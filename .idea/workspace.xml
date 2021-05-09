@@ -91,7 +91,7 @@
       <recent name="com.kaya.orderservice.order.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -209,20 +209,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.AuthServiceApplication" />
-      <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="JUnit.UserServiceTest.shouldCreate" />
       <item itemvalue="JUnit.UserServiceTest.shouldNotCreateWhenUserAlreadyExists" />
       <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldFindUserDetails" />
       <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails" />
         <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldFindUserDetails" />
         <item itemvalue="JUnit.UserServiceTest.shouldNotCreateWhenUserAlreadyExists" />
         <item itemvalue="JUnit.UserServiceTest.shouldCreate" />
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
       </list>
     </recent_temporary>
   </component>
