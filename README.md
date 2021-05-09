@@ -37,7 +37,7 @@ java -jar api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar
 You can use the given postman collection (**Getir.postman_collection.json**) for testing the APIs
 
 ## Running instructions on docker
-Go to destination of each service and run
+Go to destination of each services and run
 ```
 mvn clean package
 ```
