@@ -2,14 +2,20 @@ version: "3"
 services:
   book-service:
     build: book-service/.
+    networks:
+      - getir-network
     ports:
       - "9090:9090"
   order-service:
-    build: book-service/.
+    build: order-service/.
+    networks:
+      - getir-network
     ports:
       - "9091:9091"
   auth-service:
     build: auth-service/.
+    networks:
+      - getir-network
     depends_on:
       - mongo
     ports:
@@ -18,3 +24,6 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+
+networks:
+  getir-network:
