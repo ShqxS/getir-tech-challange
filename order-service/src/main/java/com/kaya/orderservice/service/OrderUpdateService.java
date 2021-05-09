@@ -36,6 +36,7 @@ public class OrderUpdateService {
                     book -> BookUpdateRequest.builder().stock(book.getStock()).build()));
 
     bookUpdateService.batchUpdate(request);
+    log.info("Orders are updated, orders: {}", order.toString());
     return order;
   }
 }

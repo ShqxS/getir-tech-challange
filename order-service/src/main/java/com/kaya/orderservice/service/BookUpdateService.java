@@ -26,6 +26,8 @@ public class BookUpdateService {
     for (Book book : books) {
       book.setStock(requestMap.get(book.getId()).getStock());
     }
-    return bookRepository.saveAll(books);
+    books = bookRepository.saveAll(books);
+    log.info("Books are updated, books: {}", books.toString());
+    return books;
   }
 }
