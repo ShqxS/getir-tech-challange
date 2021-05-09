@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/client/BookEndpointServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/BookCreateServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/BookReadServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/BookUpdateServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderCreateServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderReadServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderUpdateServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/validator/OrderValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
       <recent name="com.kaya.orderservice.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookUpdateServiceTest.shouldBatchUpdate">
+  <component name="RunManager" selected="JUnit.OrderValidatorTest.shouldNotValidateWhenCountNotMatched">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -123,7 +122,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="BookCreateServiceTest.shouldCreateWhenNoBookExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.shouldGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -132,14 +131,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.kaya.orderservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.BookCreateServiceTest" />
-      <option name="METHOD_NAME" value="shouldCreateWhenNoBookExist" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="shouldGetById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookCreateServiceTest.shouldNotCreateWhenBooksAlreadyExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.shouldUpdateStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -148,30 +147,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.kaya.orderservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.BookCreateServiceTest" />
-      <option name="METHOD_NAME" value="shouldNotCreateWhenBooksAlreadyExist" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="shouldUpdateStock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookEndpointServiceTest.shouldGetByIds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kaya.orderservice.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.kaya.orderservice.client" />
-      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.client.BookEndpointServiceTest" />
-      <option name="METHOD_NAME" value="shouldGetByIds" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookReadServiceTest.shouldFindAllByIds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderUpdateServiceTest.shouldUpdateStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -180,24 +163,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.kaya.orderservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.BookReadServiceTest" />
-      <option name="METHOD_NAME" value="shouldFindAllByIds" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.OrderUpdateServiceTest" />
+      <option name="METHOD_NAME" value="shouldUpdateStock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookUpdateServiceTest.shouldBatchUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderValidatorTest.shouldNotValidateWhenCountNotMatched" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kaya.orderservice.service.*" />
+          <option name="PATTERN" value="com.kaya.orderservice.validator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.kaya.orderservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.BookUpdateServiceTest" />
-      <option name="METHOD_NAME" value="shouldBatchUpdate" />
+      <option name="PACKAGE_NAME" value="com.kaya.orderservice.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.validator.OrderValidatorTest" />
+      <option name="METHOD_NAME" value="shouldNotValidateWhenCountNotMatched" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderValidatorTest.shouldValidate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.orderservice.validator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.orderservice.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.validator.OrderValidatorTest" />
+      <option name="METHOD_NAME" value="shouldValidate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -228,19 +227,19 @@
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.BookServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
-      <item itemvalue="JUnit.BookEndpointServiceTest.shouldGetByIds" />
-      <item itemvalue="JUnit.BookCreateServiceTest.shouldCreateWhenNoBookExist" />
-      <item itemvalue="JUnit.BookCreateServiceTest.shouldNotCreateWhenBooksAlreadyExist" />
-      <item itemvalue="JUnit.BookReadServiceTest.shouldFindAllByIds" />
-      <item itemvalue="JUnit.BookUpdateServiceTest.shouldBatchUpdate" />
+      <item itemvalue="JUnit.OrderServiceTest.shouldGetById" />
+      <item itemvalue="JUnit.OrderServiceTest.shouldUpdateStock" />
+      <item itemvalue="JUnit.OrderUpdateServiceTest.shouldUpdateStock" />
+      <item itemvalue="JUnit.OrderValidatorTest.shouldValidate" />
+      <item itemvalue="JUnit.OrderValidatorTest.shouldNotValidateWhenCountNotMatched" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BookUpdateServiceTest.shouldBatchUpdate" />
-        <item itemvalue="JUnit.BookReadServiceTest.shouldFindAllByIds" />
-        <item itemvalue="JUnit.BookCreateServiceTest.shouldCreateWhenNoBookExist" />
-        <item itemvalue="JUnit.BookCreateServiceTest.shouldNotCreateWhenBooksAlreadyExist" />
-        <item itemvalue="JUnit.BookEndpointServiceTest.shouldGetByIds" />
+        <item itemvalue="JUnit.OrderValidatorTest.shouldNotValidateWhenCountNotMatched" />
+        <item itemvalue="JUnit.OrderValidatorTest.shouldValidate" />
+        <item itemvalue="JUnit.OrderUpdateServiceTest.shouldUpdateStock" />
+        <item itemvalue="JUnit.OrderServiceTest.shouldUpdateStock" />
+        <item itemvalue="JUnit.OrderServiceTest.shouldGetById" />
       </list>
     </recent_temporary>
   </component>
