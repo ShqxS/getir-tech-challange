@@ -6,13 +6,72 @@
 	},
 	"item": [
 		{
-			"name": "order-service",
+			"name": "Local Development",
 			"item": [
 				{
-					"name": "order-controller",
+					"name": "book-service",
 					"item": [
 						{
-							"name": "create",
+							"name": "getAll",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/book",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/book/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"book",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getByIds",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -28,7 +87,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"bookIds\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+									"raw": "{\r\n    \"bookIds\": [\r\n        1,\r\n        2\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -36,21 +95,22 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:9091/order",
+									"raw": "http://localhost:9090/book/search",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "9091",
+									"port": "9090",
 									"path": [
-										"order"
+										"book",
+										"search"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "query",
+							"name": "update",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -62,70 +122,24 @@
 										}
 									]
 								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:9091/order/query",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "9091",
-									"path": [
-										"order",
-										"query"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "getById",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:9091/order/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "9091",
-									"path": [
-										"order",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "book-controller",
-					"item": [
-						{
-							"name": "syncStock",
-							"request": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"stock\": 250\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "http://localhost:9091/book/1",
+									"raw": "http://localhost:9090/book/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "9091",
+									"port": "9090",
 									"path": [
 										"book",
 										"1"
@@ -135,14 +149,295 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "auth-service",
+					"item": [
+						{
+							"name": "accessToken",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "web",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "web",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9092/oauth/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9092",
+									"path": [
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"canerkaya\",\r\n    \"password\": \"canerkaya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9092/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9092",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkToken",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "web",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "web",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9092/oauth/check_token?token={{access_token}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9092",
+									"path": [
+										"oauth",
+										"check_token"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{access_token}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "order-service",
+					"item": [
+						{
+							"name": "order-controller",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"bookIds\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9091/order",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9091",
+											"path": [
+												"order"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "query",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9091/order/query",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9091",
+											"path": [
+												"order",
+												"query"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getById",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9091/order/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9091",
+											"path": [
+												"order",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "book-controller",
+							"item": [
+								{
+									"name": "syncStock",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9091/book/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9091",
+											"path": [
+												"book",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
 				}
 			]
 		},
 		{
-			"name": "book-service",
+			"name": "Docker Environment",
 			"item": [
 				{
-					"name": "getAll",
+					"name": "Create An Order",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -154,24 +449,35 @@
 								}
 							]
 						},
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookIds\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:9090/book",
+							"raw": "http://localhost:8080/api/order/order",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9090",
+							"port": "8080",
 							"path": [
-								"book"
+								"api",
+								"order",
+								"order"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "get",
+					"name": "Get Order By Id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -186,13 +492,69 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/book/1",
+							"raw": "http://localhost:8080/api/order/order/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9090",
+							"port": "8080",
 							"path": [
+								"api",
+								"order",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Of Own Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/order/order/query",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"order",
+								"order",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Stock Information of Order with Order Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/order/book/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"order",
 								"book",
 								"1"
 							]
@@ -201,7 +563,70 @@
 					"response": []
 				},
 				{
-					"name": "getByIds",
+					"name": "Get All Books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/book/book/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"book",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books By Ids",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -225,13 +650,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9090/book/search",
+							"raw": "http://localhost:8080/api/book/book/search",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9090",
+							"port": "8080",
 							"path": [
+								"api",
+								"book",
 								"book",
 								"search"
 							]
@@ -240,7 +667,7 @@
 					"response": []
 				},
 				{
-					"name": "update",
+					"name": "Update Stock of Book",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -264,25 +691,102 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9090/book/1",
+							"raw": "http://localhost:8080/api/book/book/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9090",
+							"port": "8080",
 							"path": [
+								"api",
+								"book",
 								"book",
 								"1"
 							]
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "auth-service",
-			"item": [
+				},
+				{
+					"name": "checkToken",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "web",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "web",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/oauth/check_token?token={{access_token}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"oauth",
+								"check_token"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{access_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"canerkaya\",\r\n    \"password\": \"canerkaya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "accessToken",
 					"event": [
@@ -336,91 +840,17 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:9092/oauth/token",
+							"raw": "http://localhost:8080/api/auth/oauth/token",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9092",
+							"port": "8080",
 							"path": [
+								"api",
+								"auth",
 								"oauth",
 								"token"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "createUser",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"canerkaya\",\r\n    \"password\": \"canerkaya\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:9092/user",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "9092",
-							"path": [
-								"user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "checkToken",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "web",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "web",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "http://localhost:9092/oauth/check_token?token={{access_token}}",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "9092",
-							"path": [
-								"oauth",
-								"check_token"
-							],
-							"query": [
-								{
-									"key": "token",
-									"value": "{{access_token}}"
-								}
 							]
 						}
 					},
