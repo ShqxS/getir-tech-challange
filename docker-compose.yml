@@ -8,7 +8,7 @@ services:
     networks:
       - getir-network
     ports:
-      - "9091:9091"
+      - "9091:8080"
   book-service:
     build: book-service/.
     depends_on:
@@ -16,7 +16,7 @@ services:
     networks:
       - getir-network
     ports:
-      - "9090:9090"
+      - "9090:8080"
   auth-service:
     build: auth-service/.
     networks:
@@ -24,7 +24,7 @@ services:
     depends_on:
       - mongo
     ports:
-      - "9092:9092"
+      - "9092:8080"
   mongo:
     image: mongo
     networks:
