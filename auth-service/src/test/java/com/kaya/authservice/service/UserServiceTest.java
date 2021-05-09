@@ -2,6 +2,7 @@ package com.kaya.authservice.service;
 
 import com.kaya.authservice.dto.UserCreateDTO;
 import com.kaya.authservice.entity.AuthUser;
+import com.kaya.authservice.exception.AuthException;
 import com.kaya.authservice.repository.AuthUserRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -54,7 +55,7 @@ public class UserServiceTest {
     assertEquals(user.getPassword(), argumentCaptor.getValue().getPassword());
   }
 
-  @Test(expected = RuntimeException.class)
+  @Test(expected = AuthException.class)
   public void shouldNotCreateWhenUserAlreadyExists() {
     // given
     var password = "password";

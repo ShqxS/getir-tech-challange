@@ -2,6 +2,8 @@ package com.kaya.authservice.service;
 
 import com.kaya.authservice.dto.UserCreateDTO;
 import com.kaya.authservice.entity.AuthUser;
+import com.kaya.authservice.exception.AuthException;
+import com.kaya.authservice.exception.CodeEnum;
 import com.kaya.authservice.repository.AuthUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,7 +23,7 @@ public class UserService {
 
     var userDB = authUserRepository.findByUsername(userCreateDTO.getUsername());
     if (userDB.isPresent()) {
-      throw new RuntimeException("User already exist");
+      throw new AuthException(CodeEnum.CONFLICT_ERROR);
     }
 
     var user =

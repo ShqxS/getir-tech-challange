@@ -1,6 +1,7 @@
 package com.kaya.authservice.service;
 
 import com.kaya.authservice.entity.AuthUser;
+import com.kaya.authservice.exception.AuthException;
 import com.kaya.authservice.repository.AuthUserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,7 +35,7 @@ public class AuthUserDetailsServiceTest {
     verify(authUserRepository).findByUsername(username);
   }
 
-  @Test(expected = RuntimeException.class)
+  @Test(expected = AuthException.class)
   public void shouldNotFindUserDetails() {
     // given
     var username = "username";

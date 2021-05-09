@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/AuthUserDetailsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_1_5_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_3_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/CodeEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/controller/AuthUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/controller/AuthUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/dto/UserCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/dto/UserCreateDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/OrderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/AuthException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/service/AuthUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/service/AuthUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/AuthUserDetailsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/AuthUserDetailsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/kaya/authservice/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +70,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -75,6 +83,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Caner Kaya\Desktop\Projets\getir-tech-challange\auth-service\src\main\java\com\kaya\authservice" />
       <recent name="C:\Users\Caner Kaya\Desktop\Projets\getir-tech-challange\auth-service" />
       <recent name="C:\Users\Caner Kaya\Desktop\Projets\getir-tech-challange\discovery-server" />
       <recent name="C:\Users\Caner Kaya\Desktop\Projets\getir-tech-challange\order-service" />
@@ -84,14 +93,14 @@
       <recent name="com.kaya.orderservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kaya.authservice.exception" />
       <recent name="com.kaya.bookservice.dto" />
       <recent name="com.kaya.bookservice.configuration" />
       <recent name="com.kaya.authservice.configuration" />
       <recent name="com.kaya.orderservice.exception" />
-      <recent name="com.kaya.orderservice.order.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+  <component name="RunManager" selected="JUnit.com.kaya.authservice.service in auth-service">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -154,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.shouldCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auth-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kaya.authservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.kaya.authservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.kaya.authservice.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="shouldCreate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserServiceTest.shouldNotCreateWhenUserAlreadyExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <extension name="coverage">
@@ -182,6 +175,20 @@
       <option name="MAIN_CLASS_NAME" value="com.kaya.authservice.service.UserServiceTest" />
       <option name="METHOD_NAME" value="shouldNotCreateWhenUserAlreadyExists" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.kaya.authservice.service in auth-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kaya.authservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kaya.authservice.service" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,20 +216,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserServiceTest.shouldCreate" />
       <item itemvalue="JUnit.UserServiceTest.shouldNotCreateWhenUserAlreadyExists" />
       <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldFindUserDetails" />
       <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="JUnit.com.kaya.authservice.service in auth-service" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.kaya.authservice.service in auth-service" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldNotFindUserDetails" />
         <item itemvalue="JUnit.AuthUserDetailsServiceTest.shouldFindUserDetails" />
         <item itemvalue="JUnit.UserServiceTest.shouldNotCreateWhenUserAlreadyExists" />
-        <item itemvalue="JUnit.UserServiceTest.shouldCreate" />
       </list>
     </recent_temporary>
   </component>
@@ -266,6 +273,22 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/GlobalExceptionHandler.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/GlobalExceptionHandler.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

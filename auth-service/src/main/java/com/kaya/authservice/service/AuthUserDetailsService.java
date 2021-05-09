@@ -1,6 +1,8 @@
 package com.kaya.authservice.service;
 
 import com.kaya.authservice.entity.AuthUser;
+import com.kaya.authservice.exception.AuthException;
+import com.kaya.authservice.exception.CodeEnum;
 import com.kaya.authservice.repository.AuthUserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AccountStatusUserDetailsChecker;
@@ -20,7 +22,7 @@ public class AuthUserDetailsService implements UserDetailsService {
     AuthUser user =
         authUserRepository
             .findByUsername(username)
-            .orElseThrow(() -> new RuntimeException("User not found"));
+            .orElseThrow(() -> new AuthException(CodeEnum.CONTENT_NOT_FOUND_ERROR));
     new AccountStatusUserDetailsChecker().check(user);
     return user;
   }
