@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/client/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/configuration/FeignInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/BookUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/dto/OrderResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/service/BookUpdateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/BookServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/BookServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/service/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,24 +72,14 @@
       <recent name="com.kaya.orderservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kaya.bookservice.dto" />
+      <recent name="com.kaya.bookservice.configuration" />
       <recent name="com.kaya.authservice.configuration" />
       <recent name="com.kaya.orderservice.exception" />
       <recent name="com.kaya.orderservice.order.controller" />
-      <recent name="com.kaya.orderservice.book.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="getir-tech-challange" />
       <working_directory value="$PROJECT_DIR$" />
@@ -180,7 +162,9 @@
       <workItem from="1620478308610" duration="9965000" />
       <workItem from="1620488471876" duration="14247000" />
       <workItem from="1620504985462" duration="208000" />
-      <workItem from="1620510904522" duration="690000" />
+      <workItem from="1620510904522" duration="1017000" />
+      <workItem from="1620513313994" duration="225000" />
+      <workItem from="1620519280679" duration="892000" />
     </task>
     <servers />
   </component>
