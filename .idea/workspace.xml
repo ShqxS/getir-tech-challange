@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderCreateServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderReadServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/service/OrderUpdateServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/kaya/orderservice/validator/OrderValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
       <recent name="com.kaya.orderservice.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OrderValidatorTest.shouldNotValidateWhenCountNotMatched">
+  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -122,18 +119,10 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="OrderServiceTest.shouldGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kaya.orderservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.kaya.orderservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.kaya.orderservice.service.OrderServiceTest" />
-      <option name="METHOD_NAME" value="shouldGetById" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="All in auth-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,19 +216,19 @@
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.BookServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
-      <item itemvalue="JUnit.OrderServiceTest.shouldGetById" />
       <item itemvalue="JUnit.OrderServiceTest.shouldUpdateStock" />
       <item itemvalue="JUnit.OrderUpdateServiceTest.shouldUpdateStock" />
       <item itemvalue="JUnit.OrderValidatorTest.shouldValidate" />
       <item itemvalue="JUnit.OrderValidatorTest.shouldNotValidateWhenCountNotMatched" />
+      <item itemvalue="JUnit.All in auth-service" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in auth-service" />
         <item itemvalue="JUnit.OrderValidatorTest.shouldNotValidateWhenCountNotMatched" />
         <item itemvalue="JUnit.OrderValidatorTest.shouldValidate" />
         <item itemvalue="JUnit.OrderUpdateServiceTest.shouldUpdateStock" />
         <item itemvalue="JUnit.OrderServiceTest.shouldUpdateStock" />
-        <item itemvalue="JUnit.OrderServiceTest.shouldGetById" />
       </list>
     </recent_temporary>
   </component>
