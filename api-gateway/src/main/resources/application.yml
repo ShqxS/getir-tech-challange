@@ -1,0 +1,15 @@
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    book:
+      path: /api/book/**
+      url: http://localhost:9090/
+      stripPrefix: true
+    order:
+      path: /api/order/**
+      url: http://localhost:9091/
+      stripPrefix: true
+    auth:
+      path: /api/auth/**
+      url: http://localhost:9092/
+      stripPrefix: true
