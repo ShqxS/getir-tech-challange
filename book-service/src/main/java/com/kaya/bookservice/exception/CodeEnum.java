@@ -10,7 +10,9 @@ public enum CodeEnum {
   INTERNAL_SERVER_ERROR(1, "Internal server error.", HttpStatus.INTERNAL_SERVER_ERROR),
   FIELD_VALIDATION_ERROR(2, "Field validation error.", HttpStatus.BAD_REQUEST),
   CONTENT_NOT_FOUND_ERROR(3, "Content not found.", HttpStatus.BAD_REQUEST),
-  SUCCESS_RESPONSE(4, "Content not found.", HttpStatus.OK);
+  SUCCESS_RESPONSE(4, "Content not found.", HttpStatus.OK),
+  CONTENT_CREATED(5, "Content created", HttpStatus.CREATED),
+  CONFLICT_ERROR(6, "Content is already exist", HttpStatus.CONFLICT);
 
   private final int code;
   private final String message;

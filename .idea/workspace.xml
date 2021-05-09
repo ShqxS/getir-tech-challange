@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4c4442-50b7-49ad-93ed-259ba504cbe6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/client/BookEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/client/BookEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/BookUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/BookUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/OrderCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/dto/OrderCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/CodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/kaya/authservice/exception/CodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/exception/CodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/kaya/bookservice/exception/CodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/enums/CodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/enums/CodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/validator/OrderValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/kaya/orderservice/validator/OrderValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
