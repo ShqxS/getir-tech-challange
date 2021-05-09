@@ -1,5 +1,11 @@
 version: "3"
 services:
+  api-gateway:
+    build: api-gateway/.
+    networks:
+      - getir-network
+    ports:
+      - "8080:8080"
   order-service:
     build: order-service/.
     depends_on:
@@ -7,30 +13,22 @@ services:
       - book-service
     networks:
       - getir-network
-    ports:
-      - "9091:8080"
   book-service:
     build: book-service/.
     depends_on:
       - auth-service
     networks:
       - getir-network
-    ports:
-      - "9090:8080"
   auth-service:
     build: auth-service/.
     networks:
       - getir-network
     depends_on:
       - mongo
-    ports:
-      - "9092:8080"
   mongo:
     image: mongo
     networks:
       - getir-network
-    ports:
-      - "27017:27017"
 
 networks:
   getir-network:
